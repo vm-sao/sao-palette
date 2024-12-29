@@ -1,26 +1,27 @@
 {
-  "name": "sao-icons",
+  "name": "sao-palette",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "prepare": "husky"
   },
   "author": "Elias Vinh",
-  "homepage": "https://github.com/vm-sao/sao-icons",
+  "homepage": "https://github.com/vm-sao/sao-palette",
+  "description": "SAO Palette Package for getting colors styling (css, scss, sass)",
   "directories": {
     "core": "packages/core"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vm-sao/sao-icons.git"
+    "url": "https://github.com/vm-sao/sao-palette.git"
   },
   "bugs": {
-    "url": "https://github.com/vm-sao/sao-icons/issues",
+    "url": "https://github.com/vm-sao/sao-palette/issues",
     "email": "anlalayker@gmail.com"
   },
   "keywords": [
     "vm-sao",
-    "sao-icons"
+    "sao-palette"
   ],
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
