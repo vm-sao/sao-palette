@@ -1,44 +1,40 @@
-# SAO Icons
+# SAO Palette
 
-SAO Icons is a set of icons designed to be used in SAO projects.
+SAO Palette is a set of palette designed to be used in SAO projects.
 
 ## Installation
 
-To install the SAO Icons, you can use the following command:
+To install the SAO Palette, you can use the following command:
 
 ```bash
-npm install @sao-icons/styles
+npm install @sao-palette/core
 ```
 
 or
 
 ```bash
-yarn add @sao-icons/styles
+yarn add @sao-palette/core
 ```
 
 or
 
 ```bash
-pnpm install @sao-icons/styles
+pnpm install @sao-palette/core
 ```
 
 ## Usage
 
-To use the SAO Icons, you can import the `sao.css` file in your project:
-
 ```scss
-@import '@sao-icons/styles/scss';
+@import '@sao-palette/core/scss';
 ```
 
-You can also import the individual styles for each icon:
-
 ```css
-@import '@sao-icons/styles';
+@import '@sao-palette/core';
 ```
 
 ## Contributing
 
-If you want to contribute to the SAO Icons, you can follow these steps:
+If you want to contribute to the SAO Palette, you can follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your changes.
@@ -48,4 +44,4 @@ If you want to contribute to the SAO Icons, you can follow these steps:
 
 ## License
 
-The SAO Icons are licensed under the MIT License.
+The SAO Palette are licensed under the MIT License.

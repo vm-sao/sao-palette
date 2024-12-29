@@ -1,4 +1,4 @@
-# SAO Palette Styles
+# SAO Palette Core
 
 This package contains the Styling for the SAO Palette.
 
@@ -27,7 +27,6 @@ pnpm install @sao-palette/core
 ```scss
 @import '@sao-palette/core/scss';
 ```
-
 
 ```css
 @import '@sao-palette/core';
