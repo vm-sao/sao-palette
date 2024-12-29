@@ -1,0 +1,31 @@
+{
+  "name": "@sao-palette/core",
+  "version": "0.0.1",
+  "private": false,
+  "author": "Elias Vinh",
+  "license": "MIT",
+  "description": "SAO Palette Package for getting colors styling (css, scss, sass)",
+  "homepage": "https://github.com/vm-sao/sao-palette",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vm-sao/sao-palette.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/vm-sao/sao-palette/issues",
+    "email": "anlalayker@gmail.com"
+  },
+  "keywords": [
+    "vm-sao",
+    "sao-palette"
+  ],
+  "exports": {
+    ".": "./index.css",
+    "./index": "./index.css",
+    "./index.css": "./index.css",
+    "./index.scss": "./index.scss",
+    "./css": "./index.css",
+    "./scss": "./index.scss",
+    "./sass": "./index.scss"
+  }
+}
