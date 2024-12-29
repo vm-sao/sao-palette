@@ -241,19 +241,21 @@ import { fileURLToPath } from 'url';
     '3xl': '0 32px 64px -12px #10182824',
   };
   const resolver = (object, prefix) => {
-    Object.keys(object).forEach((key) => {
+    Object.keys(object).forEach(key => {
       if (typeof object[key] === 'object') {
         resolver(object[key], `${prefix}-${key}`);
       } else {
-        css += `--${prefix}-${key}: ${object[key]};\n`;
+        css += `  --${prefix}-${key}: ${object[key]};\n`;
       }
     });
-  }
+  };
 
   let css = '';
   resolver(colors, 'sao-palette-color');
   resolver(shadows, 'sao-palette-shadow');
+  const root = `:root {
+${css}}`;
 
-  writeFileSync(join(outputDir, 'index.css'), css);
-  writeFileSync(join(outputDir, 'index.scss'), css);
+  writeFileSync(join(outputDir, 'index.css'), root);
+  writeFileSync(join(outputDir, 'index.scss'), root);
 })();
