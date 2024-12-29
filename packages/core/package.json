@@ -1,6 +1,6 @@
 {
   "name": "@sao-palette/core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -26,6 +26,8 @@
     "./index.scss": "./index.scss",
     "./css": "./index.css",
     "./scss": "./index.scss",
-    "./sass": "./index.scss"
+    "./sass": "./index.scss",
+    "./variables": "./variables.scss",
+    "./variables.scss": "./variables.scss"
   }
 }
