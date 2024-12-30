@@ -1,6 +1,6 @@
 {
   "name": "@sao-palette/core",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -28,6 +28,8 @@
     "./scss": "./index.scss",
     "./sass": "./index.scss",
     "./variables": "./variables.scss",
-    "./variables.scss": "./variables.scss"
+    "./variables.scss": "./variables.scss",
+    "./mixins": "./mixins.scss",
+    "./mixins.scss": "./mixins.scss"
   }
 }

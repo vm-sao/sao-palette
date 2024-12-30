@@ -1,0 +1,21 @@
+@use 'variables';
+
+@mixin sao-setup-palette-color-variables() {
+  @each $key, $group in variables.$sao-palette-colors {
+    @include _sao-setup-color-group($group, $key);
+  }
+}
+
+@mixin sao-setup-palette-box-shadow-variables() {
+  @each $key, $value in variables.$sao-palette-shadows {
+    --sao-palette-shadow-#{$key}: #{$value};
+  }
+}
+
+@mixin _sao-setup-color-group($group, $key) {
+  @each $color-key, $color-entries in $group {
+    @each $entry-key, $entry-value in $color-entries {
+      --sao-palette-color-#{$key}-#{$color-key}-#{$entry-key}: #{$entry-value};
+    }
+  }
+}
