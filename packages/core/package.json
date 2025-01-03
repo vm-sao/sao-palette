@@ -1,6 +1,6 @@
 {
   "name": "@sao-palette/core",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -30,6 +30,9 @@
     "./variables": "./variables.scss",
     "./variables.scss": "./variables.scss",
     "./mixins": "./mixins.scss",
-    "./mixins.scss": "./mixins.scss"
+    "./mixins.scss": "./mixins.scss",
+    "./tailwind": "./tailwind/index.js",
+    "./tailwind/provide-shadow": "./tailwind/provide-shadow.js",
+    "./tailwind/provide-colors": "./tailwind/provide-colors.js"
   }
 }
