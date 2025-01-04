@@ -263,7 +263,10 @@ import { fileURLToPath } from 'url';
   resolver(shadows, 'sao-palette-shadow');
   const root = `:root {
 ${css}}`;
+  const mixins = `@mixin sao-setup-palette() {
+${css}}`;
 
   writeFileSync(join(outputDir, 'index.css'), root);
   writeFileSync(join(outputDir, 'index.scss'), root);
+  writeFileSync(join(outputDir, 'mixins.scss'), mixins);
 })();
