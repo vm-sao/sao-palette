@@ -240,12 +240,20 @@ import { fileURLToPath } from 'url';
     '2xl': '0 24px 48px -12px #1018282e',
     '3xl': '0 32px 64px -12px #10182824',
   };
+  const hexToRgb = hex => {
+    const bigint = parseInt(hex.slice(1), 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `${r}, ${g}, ${b}`;
+  };
   const resolver = (object, prefix) => {
     Object.keys(object).forEach(key => {
       if (typeof object[key] === 'object') {
         resolver(object[key], `${prefix}-${key}`);
       } else {
         css += `  --${prefix}-${key}: ${object[key]};\n`;
+        css += `  --${prefix}-${key}-rgb: ${hexToRgb(object[key])};\n`;
       }
     });
   };

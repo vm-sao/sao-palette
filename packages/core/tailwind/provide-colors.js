@@ -58,7 +58,7 @@ export function provideSAOTailwindColors() {
   return colors.flat().reduce(
     (acc, key) => ({
       ...acc,
-      [key]: `var(--sao-palette-color-${key})`,
+      [key]: `rgb(var(--sao-palette-color-${key}-rgb) / <alpha-value>)`,
     }),
     {}
   );
