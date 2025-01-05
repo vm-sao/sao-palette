@@ -29,7 +29,7 @@ import { fileURLToPath } from 'url';
         o30: '#cdd5df4d',
         o24: '#cdd5df3d',
         o16: '#cdd5df29',
-        50: '#fff',
+        50: '#ffffff',
         100: '#fcfcfd',
         200: '#f8fafc',
         300: '#eef2f6',
