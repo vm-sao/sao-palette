@@ -224,6 +224,8 @@ import { fileURLToPath } from 'url';
         900: '#171717',
       },
     },
+  };
+  const images = {
     gradient: {
       primary: {
         100: 'linear-gradient(90deg, #4776e6 0%, #7b54e9 100%)',
@@ -247,20 +249,23 @@ import { fileURLToPath } from 'url';
     const b = bigint & 255;
     return `${r}, ${g}, ${b}`;
   };
-  const resolver = (object, prefix) => {
+  const resolver = (object, prefix, ignoreRgbTransform = false) => {
     Object.keys(object).forEach(key => {
       if (typeof object[key] === 'object') {
-        resolver(object[key], `${prefix}-${key}`);
+        resolver(object[key], `${prefix}-${key}`, ignoreRgbTransform);
       } else {
         css += `  --${prefix}-${key}: ${object[key]};\n`;
-        css += `  --${prefix}-${key}-rgb: ${hexToRgb(object[key])};\n`;
+        if (!ignoreRgbTransform) {
+          css += `  --${prefix}-${key}-rgb: ${hexToRgb(object[key])};\n`;
+        }
       }
     });
   };
 
   let css = '';
   resolver(colors, 'sao-palette-color');
-  resolver(shadows, 'sao-palette-shadow');
+  resolver(images, 'sao-palette-image', true);
+  resolver(shadows, 'sao-palette-shadow', true);
   const root = `:root {
 ${css}}`;
   const mixins = `@mixin sao-setup-palette() {

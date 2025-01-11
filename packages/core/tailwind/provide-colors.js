@@ -50,15 +50,27 @@ export function provideSAOTailwindColors() {
         '900',
       ].map(opacity => `global-${group}-${opacity}`)
     ),
-    ...['primary'].map(group =>
-      ['100', '200'].map(opacity => `gradient-${group}-${opacity}`)
-    ),
   ];
 
   return colors.flat().reduce(
     (acc, key) => ({
       ...acc,
-      [key]: `rgb(var(--sao-palette-color-${key}-rgb) / <alpha-value>)`,
+      [key]: `rgba(var(--sao-palette-color-${key}-rgb), <alpha-value>)`,
+    }),
+    {}
+  );
+}
+
+export function provideSAOTailwindBackgroundImages() {
+  const colors = [
+    ...['primary'].map(group =>
+      ['100', '200'].map(opacity => `gradient-${group}-${opacity}`)
+    ),
+  ];
+  return colors.flat().reduce(
+    (acc, key) => ({
+      ...acc,
+      [key]: `var(--sao-palette-image-${key})`,
     }),
     {}
   );
